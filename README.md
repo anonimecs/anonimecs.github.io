@@ -1,5 +1,5 @@
-# [Anonimecs Web](
-currenctly available at http://http://anonimecs.github.io/anonimecs-com/)
+# [Anonimecs Web]
+currenctly available at http://http://anonimecs.github.io
 
 ## Sources
 This has been forked from 
