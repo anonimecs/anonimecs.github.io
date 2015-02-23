@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="description"
+	content="Use Anonimecs to turn your productive data anonimous. Keep them fresh by scheduled anonimisation.">
+
+<title>Turn development data anonymous with Anonimecs|Documentation|Version 1.x</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="scripts/angular.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div ng-include="'include_nav.html'"></div>
+	</div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<!-- Page Heading/Breadcrumbs -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">
+					Documentation <small>Version 1.x</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Docs</a></li>
+					<li class="active">Version 1.x</li>
+				</ol>
+			</div>
+		</div>
+		<!-- /.row -->
+
+		<!-- Content Row -->
+		<div class="row">
+			<p>This is the documentation of the Anonimecs enterprise edition version 1.x. The free edition of the tool</p>
+			<h2>Support Matrix</h2>
+
+
+			<table border="0" cellpadding="0" cellspacing="0" width="840">
+				<colgroup>
+					<col width="64" />
+					<col width="117" />
+					<col span="3" width="64" />
+					<col width="467" />
+				</colgroup>
+				<tbody>
+					<tr height="17">
+						<td height="17" width="64">Database</td>
+						<td width="117">Data Type</td>
+						<td width="64">Destroy</td>
+						<td width="64">Encrypt</td>
+						<td width="64">Reshuffle</td>
+						<td width="467">Native Column Type</td>
+					</tr>
+					<tr height="17">
+						<td height="17">Sybase</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "CHAR", "NCHAR", "NVARCHAR", "UNICHAR", "UNIVARCHAR"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE, "DATETIME", "TIMESTAMP", "SMALLDATETIME", "TIME"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DECIMAL, "INT", "TINYINT", "BIGINT", "SMALLINT", "UINT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"NUMERIC,"FLOAT", "REAL"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17">Oracle</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "VARCHAR2", "CHAR", "NCHAR", "NVARCHAR2"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE, "TIMESTAMP"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"NUMBER, "LONG"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"FLOAT, "NUMERIC","BINARY_FLOAT","BINARY_DOUBLE"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17">MySql</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "CHAR", "TEXT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE","DATETIME", "TIMESTAMP", "TIME"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"INT", "TINYINT", "SMALLINT", "MEDIUMINT", "BIGINT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DECIMAL","FLOAT", "DOUBLE", "NUMERIC"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+
+
+			<h2>Method documentation</h2>
+			<p>
+				<strong>Destroy</strong>
+			</p>
+			<p>Destroy, masking or wiping out part of the data, is the basic way of anomymisig data. Colums, that are not
+				relevant for your anonymized data set, as the street name in a client record, can be wiped out, or - preferably -
+				replaced by some placeholder dummies.</p>
+			<p>
+				<strong>Encoding</strong>
+			</p>
+			<p>Encoding a column with a seed (password) allows for tracing back the data for the password owners. This
+				compromise of anonymity is sometimes desirable, as data errors or method errors may need to be traced back to the
+				original de-anonymised data, to allows for error correction and data discrepancies elimination.</p>
+			<p>
+				<strong>Reshuffle</strong>
+			</p>
+			<p>Reshuffle is a method of re-shufflig your data, that allows for very good human readability, that is often
+				required in testing or acceptance scenarios. Original values of the to be anonymized entities are replaced by a
+				pseudo-random replacement value of all possible values in the domain. A seed (password) is used again to re-shuffle
+				the values, hence de-anonymization for error analysis is possible for password owners.</p>
+
+			<h2>Anonymisation run</h2>
+			<p>Once you have finished setting up your configuration, or when you want to check the validity of your
+				anonymisation settings, you will need to run your configuration. You will do this in the Run-&gt;Execute menu.</p>
+			<p>As described in detail in the previous chapter, in Anonimecs, the basic unit of execution is one anonymisation
+				method comprising one or more anonymized columns. In enterprise version you can selectively run these methods, by
+				clicking on the run button of the method. The changes in the anonymisation process are pushed to the execution GUI
+				immediately, allowing for following the process of anonymisation without database browser tools.</p>
+			<p>Running all anonymisation or scheduling the anonymisation via the Scheduler will execute the whole batch of
+				anonymisation methods defined in the connected database configuration.</p>
+			<p>Each anonymisation run will leave a detailed audit trail as described in the Auditing section.</p>
+			<h2>Scheduling – Enterprise Feature</h2>
+			<p>In Anonimecs, it is possible to run an anonymisation process in scheduled manner, without user interaction.
+				The startServerRunner and the startStandaloneRunner scripts are provided with the enterprise distribution, with
+				bat/sh content to cater for Windows/Linux.</p>
+			<p>The startStandaloneRunner.sh will not require a running Anonimecs server, and is intended for small to medium
+				enterprises, where a dedicated server running the Anonimecs server may not be available.</p>
+			<p>
+				Run example: startStandaloneRunner.sh <em>salesdatabase</em>
+			</p>
+			<p>
+				where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+			</p>
+			<p>The startServerRunner.sh script will connect to the server via the RMI API (see API section), and run the
+				anonymisation within the context of the server. This is more feasible for large organization, with multiple database
+				configurations.</p>
+			<p>
+				Run example: startServerRunner.sh <em>salesdatabase</em>
+			</p>
+			<p>
+				where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+			</p>
+			<p>Enterprise tools for scheduling processes are well established by most of our client. We offer tested
+				solutions to the most popular scheduling frameworks, including Cron, Quartz, UC4.</p>
+
+			<strong> <br clear="all" />
+			</strong>
+			
+
+
+
+		</div>
+		<!-- /.row -->
+
+		<div ng-include="'include_footer.html'"></div>
+
+	</div>
+	<!-- /.container -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Piwik -->
+	<script src="js/piwik.js"></script>
+	<noscript>
+		<p>
+			<img src="//stats.anonimecs.com/piwik.php?idsite=1" style="border: 0;" alt="" />
+		</p>
+	</noscript>
+	<!-- End Piwik Code -->
+
+
+</body>
+
+</html>
