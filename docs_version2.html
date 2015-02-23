@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="description"
+	content="Use Anonimecs to turn your productive data anonimous. Keep them fresh by scheduled anonimisation.">
+
+<title>Turn development data anonymous with Anonimecs|Documentation|Version 2.x</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="scripts/angular.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div ng-include="'include_nav.html'"></div>
+	</div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<!-- Page Heading/Breadcrumbs -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">
+					Documentation <small>Version 2.x</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Docs</a></li>
+					<li class="active">Version 2.x</li>
+				</ol>
+			</div>
+		</div>
+		<!-- /.row -->
+
+		<!-- Content Row -->
+		<div class="row">
+			<p>This is the documentation of the Anonimecs enterprise edition version 2.x. The free edition of the tool</p>
+			<h2>Support Matrix</h2>
+
+
+			<table border="0" cellpadding="0" cellspacing="0" width="840">
+				<colgroup>
+					<col width="64" />
+					<col width="117" />
+					<col span="3" width="64" />
+					<col width="467" />
+				</colgroup>
+				<tbody>
+					<tr height="17">
+						<td height="17" width="64">Database</td>
+						<td width="117">Data Type</td>
+						<td width="64">Destroy</td>
+						<td width="64">Encrypt</td>
+						<td width="64">Reshuffle</td>
+						<td width="467">Native Column Type</td>
+					</tr>
+					<tr height="17">
+						<td height="17">Sybase</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "CHAR", "NCHAR", "NVARCHAR", "UNICHAR", "UNIVARCHAR"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE, "DATETIME", "TIMESTAMP", "SMALLDATETIME", "TIME"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DECIMAL, "INT", "TINYINT", "BIGINT", "SMALLINT", "UINT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"NUMERIC,"FLOAT", "REAL"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17">Oracle</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "VARCHAR2", "CHAR", "NCHAR", "NVARCHAR2"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE, "TIMESTAMP"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"NUMBER, "LONG"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"FLOAT, "NUMERIC","BINARY_FLOAT","BINARY_DOUBLE"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17">MySql</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR, "CHAR", "TEXT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE","DATETIME", "TIMESTAMP", "TIME"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"INT", "TINYINT", "SMALLINT", "MEDIUMINT", "BIGINT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DECIMAL","FLOAT", "DOUBLE", "NUMERIC"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17">SqlServer</td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+						<td><br /></td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Text Strings</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"VARCHAR", "CHAR", "NCHAR", "NVARCHAR"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Dates and times</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DATE", "DATETIME", "DATETIME2", "TIME", "SMALLDATETIME"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Integers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"DECIMAL", "INT", "TINYINT", "BIGINT", "SMALLINT", "UINT"</td>
+					</tr>
+					<tr height="17">
+						<td height="17"><br /></td>
+						<td>Real Numbers</td>
+						<td>x</td>
+						<td>x</td>
+						<td>x</td>
+						<td>"NUMERIC","FLOAT", "REAL"</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+
+
+			<h2>Method documentation</h2>
+			<p>
+				<strong>Destroy</strong>
+			</p>
+			<p>Destroy, masking or wiping out part of the data, is the basic way of anomymisig data. Colums, that are not
+				relevant for your anonymized data set, as the street name in a client record, can be wiped out, or - preferably -
+				replaced by some placeholder dummies.</p>
+			<p>
+				<strong>Encoding</strong>
+			</p>
+			<p>Encoding a column with a seed (password) allows for tracing back the data for the password owners. This
+				compromise of anonymity is sometimes desirable, as data errors or method errors may need to be traced back to the
+				original de-anonymised data, to allows for error correction and data discrepancies elimination.</p>
+			<p>
+				<strong>Reshuffle</strong>
+			</p>
+			<p>Reshuffle is a method of re-shufflig your data, that allows for very good human readability, that is often
+				required in testing or acceptance scenarios. Original values of the to be anonymized entities are replaced by a
+				pseudo-random replacement value of all possible values in the domain. A seed (password) is used again to re-shuffle
+				the values, hence de-anonymization for error analysis is possible for password owners.</p>
+			<h2>Architecture Picture</h2>
+			<p>Diagram with server, database, target databases, standalone and server runner, browser.</p>
+			<h2>Configuring</h2>
+			<p>Creating a database configuration</p>
+			<p>Anonymisation method</p>
+			<p>Anonymized column</p>
+			<p>Related Tables</p>
+			<h2>Anonymisation run</h2>
+			<p>Once you have finished setting up your configuration, or when you want to check the validity of your
+				anonymisation settings, you will need to run your configuration. You will do this in the Run-&gt;Execute menu.</p>
+			<p>As described in detail in the previous chapter, in Anonimecs, the basic unit of execution is one anonymisation
+				method comprising one or more anonymized columns. In enterprise version you can selectively run these methods, by
+				clicking on the run button of the method. The changes in the anonymisation process are pushed to the execution GUI
+				immediately, allowing for following the process of anonymisation without database browser tools.</p>
+			<p>Running all anonymisation or scheduling the anonymisation via the Scheduler will execute the whole batch of
+				anonymisation methods defined in the connected database configuration.</p>
+			<p>Each anonymisation run will leave a detailed audit trail as described in the Auditing section.</p>
+			<h2>Scheduling – Enterprise Feature</h2>
+			<p>In Anonimecs, it is possible to run an anonymisation process in scheduled manner, without user interaction.
+				The startServerRunner and the startStandaloneRunner scripts are provided with the enterprise distribution, with
+				bat/sh content to cater for Windows/Linux.</p>
+			<p>The startStandaloneRunner.sh will not require a running Anonimecs server, and is intended for small to medium
+				enterprises, where a dedicated server running the Anonimecs server may not be available.</p>
+			<p>
+				Run example: startStandaloneRunner.sh <em>salesdatabase</em>
+			</p>
+			<p>
+				where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+			</p>
+			<p>The startServerRunner.sh script will connect to the server via the RMI API (see API section), and run the
+				anonymisation within the context of the server. This is more feasible for large organization, with multiple database
+				configurations.</p>
+			<p>
+				Run example: startServerRunner.sh <em>salesdatabase</em>
+			</p>
+			<p>
+				where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+			</p>
+			<p>Enterprise tools for scheduling processes are well established by most of our client. We offer tested
+				solutions to the most popular scheduling frameworks, including Cron, Quartz, UC4.</p>
+			<h2>Multi user Capabilities – Enterprise Feature</h2>
+			<h2>Configuration Database Access – Enterprise Feature</h2>
+			<strong> <br clear="all" />
+			</strong>
+			<h2>Auditing</h2>
+			<p>Logging and auditing is a common and proven concept of enterprise processes. It helps tracking the changes of
+				your data, following the state of the process and looking for errors if your process does not work as intended.</p>
+			<p>Anonimecs offers powerful auditing mechanisms that track the state of your databases, data, and their intended
+				anonymity. Each execution of an anonymisation method will leave a persistent trace of you action, be it a manual or
+				scheduled execution. You can then review the data in the Run-&gt;Audit Logs menu point.</p>
+			<p>Any execution trigger will create a line in the displayed table. Clicking on this line will reveal the details
+				of this anonymisation execution, and will help you to assess, where your process spent most of its time (database
+				resources), and if it finished successfully. In case of data error, or other malfunction of your configuration, you
+				can trace here down to the columns that have succeeded in anonymisation, and the first column, where the execution
+				halted. Anonimecs will always halt the anonymisation process on the first error, as it is easier to fix this error
+				and continue from this point, than deal with multiple errors and partial failures.</p>
+			<p>Auditing also helps to estimate runtimes of your anonymisation. Previous runtimes will be consulted when a new
+				run is started, so you will have a relatively precise estimate of the expected runtimes.</p>
+			<h2>Backup – Enterprise Feature</h2>
+			<p>Sophisticated enterprises, with multiple databases, department and data streams require sophisticated
+				anonymisation setups. These will span over several database configurations, may be provisioned by different users,
+				and require days or weeks of implementation and testing. The Backup functionality comes to help here. It allows for
+				regular dumps (backups) of the configuration data and retaining or moving this configuration.</p>
+			<p>You can think of this as a support for a change cycle in your anonymisation setup. Back up your current setup,
+				as you are sure it works as intended. Make your configuration changes, until you are satisfied with the new
+				configuration. Should you get lost on the way, just roll back to your last best setup, and start anew.</p>
+			<p>
+				To create a backup of your current setup, navigate to the Admin-&gt;Backup menu. The displayed page will show you
+				all the previous backups you or other admins have created. Press the <strong>Backup the configuration now</strong>
+				button to create a new backup. This will back up the complete state of you Anonimecs, including anonymisation
+				methods, users, audit trails.
+			</p>
+			<p>You will not need to stop Anonimecs or the database server for this operation.</p>
+			<p>To roll back to a previous backup, go to the Admin-&gt;Backup menu, and follow the instructions in the bottom
+				of the screen.</p>
+			<h2>JAVA API – Enterprise Feature</h2>
+			<p>The concepts of Anonimecs strongly discourages the one size fits all principle. We believe in scalable
+				architecture, and offer solutions, that suit your business case complexity. One of the ultimate features of
+				Anonimecs is its Java API that allows interacting with your installation solely with machine to machine manner.</p>
+			<p>The scheduling feature, described in the previous chapters makes itself use of this API. However, your
+				scenarios are not limited to running an existing anonymisation configuration. You can create and manage your
+				database connections or anonymisation configuration, and run them all as a part of your corporate application.</p>
+			<p>The Java API is centered on the anon-api.jar and an RMI interface to the Anonimecs Server Process. The
+				following tutorial show you how to create a new anonymisation configuration with the use of Maven, Spring, Java and
+				the anon-api.jar. This tutorial assumes you are already familiar with these Maven and Java.</p>
+			<p>1) Add maven dependency to the anon-api.jar available in your Anonimecs enterprise ZIP distribution.</p>
+			<p>&lt;dependency&gt;</p>
+			<p>&lt;groupId&gt;org.anon&lt;/groupId&gt;</p>
+			<p>
+				&lt;artifactId&gt;anon-<u>api</u>&lt;/artifactId&gt;
+			</p>
+			<p>&lt;version&gt;${project.version}&lt;/version&gt;</p>
+			<p>&lt;/dependency&gt;</p>
+			<p>This will transitively fetch all necessary spring dependencies.</p>
+			<p>2) Import the Spring RMI client configuration file spring-anon-rmi-client.xml your master spring config.</p>
+			<p>
+				&lt;import resource="classpath: spring-anon-rmi-client.xml "/&gt; <br /> This will load the RMI Stubs in the Spring
+				container, and define the server lookup.
+			</p>
+			<p>3) Inject your API stubs in your client application.</p>
+			<p>@Autowired DatabaseConfigService databaseConfigService;</p>
+			<p>@Autowired EditedTableService editedTableService;</p>
+			<p>4) Start the Anonimecs server, and run your client code.</p>
+			<p>@Autowired</p>
+			<p>DatabaseConfigService databaseConfigService;</p>
+			<p>@Autowired</p>
+			<p>EditedTableService editedTableService;</p>
+			<p>
+				<strong>public</strong> <strong>void</strong> createDatabaseConfigration() {
+			</p>
+			<p>
+				DatabaseConfig databaseConfig = <em>createDatabaseConfigMySql</em>();
+			</p>
+			<p>databaseConfigService.addDatabaseConfig(databaseConfig);</p>
+			<p>}</p>
+			<p>
+				<strong>public</strong> DatabaseConfig createDatabaseConfigMySql() {
+			</p>
+			<p>
+				DatabaseConfig config = <strong>new</strong> DatabaseConfig();
+			</p>
+			<p>config.setUrl("localhost:3306");</p>
+			<p>config.setLogin("root");</p>
+			<p>config.setPassword("secret");</p>
+			<p>
+				config.setVendor(Database.<em>MYSQL</em>);
+			</p>
+			<p>
+				config.setVersion(<strong>null</strong>);
+			</p>
+			<p>config.setGuiName("integration-test-mysql");</p>
+			<p>
+				<strong>return</strong> config;
+			</p>
+			<p>}</p>
+			<p>
+				<strong>public</strong> <strong>void</strong> addAnonymisationMethod(){
+			</p>
+			<p>
+				DatabaseTableInfo editedTable= <strong>new</strong> DatabaseTableInfo();
+			</p>
+			<p>editedTable.setName("dept_manager");</p>
+			<p>editedTable.setSchema("employees");</p>
+			<p>
+				DatabaseColumnInfo editedColumn = <strong>new</strong> DatabaseColumnInfo("to_date",
+			</p>
+			<p>
+				"date", DatabaseSpecifics.<em>MySqlSpecific</em>);
+			</p>
+			<p>editedTable.addColumn(editedColumn);</p>
+			<p>AnonymisedColumnInfo anonymizedColumn =</p>
+			<p>
+				<strong>new</strong> AnonymisedColumnInfo(editedColumn);
+			</p>
+			<p>AnonymisationMethod anonymisationMethod =</p>
+			<p>
+				<strong>new</strong> AnonymisationMethodDestoryMySql();
+			</p>
+			<p>DatabaseConfig databaseConfig = databaseConfigService.</p>
+			<p>
+				loadConnectionConfig(<em>“</em>integration-test-mysql<em>”</em>);
+			</p>
+			<p>anonServer.useDatabaseConfig(databaseConfig);</p>
+			<p>editedTableService.addAnonymisation(editedTable,</p>
+			<p>
+				anonymizedColumn,<u>Collections.</u><em><u>EMPTY_LIST</u></em>, anonymisationMethod);
+			</p>
+			<p>}</p>
+			<p>5) This is all. After this point, your new database configuration is available in the Anonimecs GUI for manual
+				configuration. Obviously, you can also configure the anonymisation over the API. For the full Java API documentation
+				refer to the Javadoc of the anon-api.jar.</p>
+			<h2>SQL API – Enterprise Feature</h2>
+
+		</div>
+		<!-- /.row -->
+
+		<div ng-include="'include_footer.html'"></div>
+
+	</div>
+	<!-- /.container -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Piwik -->
+	<script src="js/piwik.js"></script>
+	<noscript>
+		<p>
+			<img src="//stats.anonimecs.com/piwik.php?idsite=1" style="border: 0;" alt="" />
+		</p>
+	</noscript>
+	<!-- End Piwik Code -->
+
+
+</body>
+
+</html>
