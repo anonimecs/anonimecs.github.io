@@ -20,6 +20,9 @@
 <!-- Custom Fonts -->
 <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+<!-- Syntax coloring -->
+<link rel="stylesheet" href="css/prettify.css">
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +32,8 @@
     <![endif]-->
 
 <script src="scripts/angular.js"></script>
+
+<script src="js/prettify.js"></script>
 </head>
 
 <body>
@@ -1190,14 +1195,14 @@
 <p>
     1) Add maven dependency to the anon-api.jar available in your Anonimecs enterprise ZIP distribution.
 </p>
-	<pre><code>
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.anon&lt;/groupId&gt;
-			&lt;artifactId&gt;anon-api&lt;/artifactId&gt;
-			&lt;version&gt;${project.version}&lt;/version&gt;
-		&lt;/dependency&gt;
+<pre class="prettyprint ">
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.anon&lt;/groupId&gt;
+		&lt;artifactId&gt;anon-api&lt;/artifactId&gt;
+		&lt;version&gt;${project.version}&lt;/version&gt;
+	&lt;/dependency&gt;
 	
-	</code></pre>
+</pre>
 
 <p>
     This will transitively fetch all necessary spring dependencies.
@@ -1205,9 +1210,9 @@
 <p>
     2) Import the Spring RMI client configuration file spring-anon-rmi-client.xml your master spring config.
 </p>
-	<pre><code>
-    &lt;import resource="classpath: spring-anon-rmi-client.xml "/&gt;
-	</code></pre>
+<pre class="prettyprint ">
+    &lt;import resource="classpath:spring-anon-rmi-client.xml"/&gt;
+</pre>
     <br/>
     This will load the RMI Stubs in the Spring container, and define the server lookup.
 
@@ -1216,63 +1221,59 @@
     <br/>
     <br/>
 </p>
-	<pre><code>
+<pre class="prettyprint ">
     @Autowired DatabaseConfigService databaseConfigService;
     @Autowired EditedTableService editedTableService;
-    </code></pre>
+</pre>
     <br/>
 <p>
     4) Start the Anonimecs server, and run your client code.
 </p>
 
-	<pre><code>
-    @Autowired
-    DatabaseConfigService databaseConfigService;
-    @Autowired
-    EditedTableService editedTableService;
-    
-    <strong>public</strong>
-    <strong>void</strong>
-    createDatabaseConfigration() {
-    DatabaseConfig databaseConfig = <em>createDatabaseConfigMySql</em>();
-    databaseConfigService.addDatabaseConfig(databaseConfig);
-    }
-    <strong>public</strong>
-    DatabaseConfig createDatabaseConfigMySql() {
-    DatabaseConfig config = <strong>new</strong> DatabaseConfig();
-    config.setUrl("localhost:3306");
-    config.setLogin("user");
-    config.setPassword("password");
-    config.setVendor(Database.<em>MYSQL</em>);
-    config.setVersion(<strong>null</strong>);
-    config.setGuiName("mysql-database");
-    <strong>return</strong>
-    config;
-    }
-    <strong>public</strong>
-    <strong>void</strong>
-    addAnonymisationMethod(){
-    DatabaseTableInfo editedTable= <strong>new</strong> DatabaseTableInfo();
-    editedTable.setName("dept_manager");
-    editedTable.setSchema("employees");
-    DatabaseColumnInfo editedColumn =
-    <strong>new</strong>
-    DatabaseColumnInfo("to_date",
-    "date", DatabaseSpecifics.<em>MySqlSpecific</em>);
-    editedTable.addColumn(editedColumn);
-    AnonymisedColumnInfo anonymizedColumn =
-    <strong>new</strong>
-    AnonymisedColumnInfo(editedColumn);
-    AnonymisationMethod anonymisationMethod =
-    <strong>new</strong>
-    AnonymisationMethodDestoryMySql();
-    DatabaseConfig databaseConfig = databaseConfigService.
-    loadConnectionConfig(<em>“</em>mysql-database<em>”</em>);
-    anonServer.useDatabaseConfig(databaseConfig);
-    editedTableService.addAnonymisation(editedTable,
-    anonymizedColumn,<u>Collections.</u><em><u>EMPTY_LIST</u></em>, anonymisationMethod);
-    }
-    </code></pre>
+<pre class="prettyprint ">
+	@Autowired	
+	DatabaseConfigService databaseConfigService;
+
+	@Autowired
+	EditedTableService editedTableService;
+	
+	public void createDatabaseConfigration() {
+		DatabaseConfig databaseConfig = createDatabaseConfigMySql();
+		databaseConfigService.addDatabaseConfig(databaseConfig);
+	}
+
+	public DatabaseConfig createDatabaseConfigMySql() {
+		DatabaseConfig config = new DatabaseConfig();
+		config.setUrl("localhost:3306");
+		config.setLogin("user");
+		config.setPassword("password");
+		config.setVendor(Database.MYSQL);
+		config.setVersion(null);
+		config.setGuiName("mysql-database");
+		return config;
+	}
+
+	public void addAnonymisationMethod(){
+		DatabaseTableInfo editedTable= new DatabaseTableInfo();
+		editedTable.setName("dept_manager");
+		editedTable.setSchema("employees");
+		DatabaseColumnInfo editedColumn = new DatabaseColumnInfo("to_date", 
+			"date", DatabaseSpecifics.MySqlSpecific);
+		editedTable.addColumn(editedColumn);
+
+		AnonymisedColumnInfo anonymizedColumn = new AnonymisedColumnInfo(editedColumn);
+		
+		AnonymisationMethod anonymisationMethod = new AnonymisationMethodDestoryMySql();
+		
+		
+		DatabaseConfig databaseConfig = databaseConfigService.loadConnectionConfig(“mysql-database”);
+		
+		anonServer.useDatabaseConfig(databaseConfig);
+		editedTableService.addAnonymisation(editedTable,
+		anonymizedColumn,Collections.EMPTY_LIST, anonymisationMethod);
+	}
+   
+</pre>
     
 
 <p>
@@ -1332,7 +1333,13 @@
 	</noscript>
 	<!-- End Piwik Code -->
 
-
+	<script>
+	  !function ($) {
+	    $(function(){
+	      window.prettyPrint && prettyPrint()
+	    })
+	  }(window.jQuery)
+	</script>
 </body>
 
 </html>
