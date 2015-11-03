@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="description"
+	content="Use Anonimecs to turn your productive data anonimous. Keep them fresh by scheduled anonimisation.">
+
+<title>Turn development data anonymous with Anonimecs|Documentation|Version 2.2</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Syntax coloring -->
+<link rel="stylesheet" href="css/prettify.css">
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="scripts/angular.js"></script>
+
+<script src="js/prettify.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div ng-include="'include_nav.html'"></div>
+	</div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<!-- Page Heading/Breadcrumbs -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">
+					Documentation <small>Version 2.2</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Docs</a></li>
+					<li class="active">Version 2.2</li>
+				</ol>
+			</div>
+		</div>
+		<!-- /.row -->
+
+		<!-- Content Row -->
+		<div class="row">
+		
+		<!-- *********** PASTE HERE START -->
+
+
+<p>
+    This is the documentation of the Open Source Anonimecs version 2.2.
+</p>
+<h2>
+    Supported databases, methods and data types
+</h2>
+<table class="table table-striped table-condensed">
+    <tbody>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong>Database</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    <strong>Data Type</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p>
+                    <strong>Destroy</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p>
+                    <strong>Encrypt</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p>
+                    <strong>Reshuffle</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p>
+                    <strong>Mapping</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="215">
+                <p>
+                    <strong>Native Column Type</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong>Sybase</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td  valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Text Strings
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    VARCHAR, CHAR, NCHAR, NVARCHAR, UNICHAR, UNIVARCHAR
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Dates and times
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DATE, DATETIME, TIMESTAMP, SMALLDATETIME, TIME
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Integers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DECIMAL, INT, TINYINT, BIGINT, SMALLINT, UINT
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Real Numbers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    NUMERIC,FLOAT, REAL
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong>Oracle</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Text Strings
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    VARCHAR, VARCHAR2, CHAR, NCHAR, NVARCHAR2
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Dates and times
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DATE, TIMESTAMP
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Integers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    NUMBER, LONG
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Real Numbers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    FLOAT, NUMERIC, BINARY_FLOAT,BINARY_DOUBLE
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong>MySql</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Text Strings
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    VARCHAR, CHAR, TEXT
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Dates and times
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DATE,DATETIME, TIMESTAMP, TIME
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Integers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    INT, TINYINT, SMALLINT, MEDIUMINT, BIGINT
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Real Numbers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DECIMAL,FLOAT, DOUBLE, NUMERIC
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong>SqlServer</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <br/>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Text Strings
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    VARCHAR, CHAR, NCHAR, NVARCHAR
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Dates and times
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <br/>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <br/>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DATE, DATETIME, DATETIME2, TIME, SMALLDATETIME
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Integers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    DECIMAL, INT, TINYINT, BIGINT, SMALLINT, UINT
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td  valign="bottom" width="77">
+                <p>
+                    <strong> </strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="117">
+                <p>
+                    Real Numbers
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="64">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="75">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td  valign="bottom" width="69">
+                <p align="center">
+                    <strong>x</strong>
+                </p>
+            </td>
+            <td valign="bottom" width="215">
+                <p>
+                    NUMERIC,FLOAT, REAL
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2>
+</h2>
+<strong>
+    <br clear="all"/>
+</strong>
+<h2>
+    Method documentation
+</h2>
+<p>
+    <strong>Destroy</strong>
+</p>
+<p>
+    Destroy, masking or wiping out part of the data, is the basic way of anonymizing data. Columns, that are not relevant for your anonymized data set, as the
+    street name in a client record, can be wiped out, or - preferably - replaced by some placeholder dummies.
+</p>
+<p>
+    Please note, that masking is not a constraint tolerant annotation. Unique and referential column constraints will be dropped to run this type of
+    anonymisation.
+</p>
+<p>
+    <strong>Encoding</strong>
+</p>
+<p>
+    Encoding a column with a seed (password) allows for tracing back the data for the password owners. This compromise of anonymity is sometimes desirable, as
+    data errors or method errors may need to be traced back to the original de-anonymized data, to allow for error correction and data discrepancies
+    elimination.
+</p>
+<p>
+    Encoding is a better option with regard to constraints. Uniqueness of the values can be maintained, and referential integrity will be preserved, if the
+    referenced table is also included in the anonymisation.
+</p>
+<p>
+    <strong>Reshuffle</strong>
+</p>
+<p>
+    Reshuffle is a method of re-shuffling your data, that allows for very good human readability that is often required in testing or acceptance scenarios.
+    Original values of the to-be-anonymized entities are replaced by a pseudo-random replacement value of all possible values in the domain. A seed (password)
+    is used again to re-shuffle the values; hence de-anonymisation for error analysis is possible for password owners.
+</p>
+<p>
+    If the database defines referential or unique constraints for the target columns, reshuffle is the best option. These constraints can be reactivated
+    successfully in nearly all scenarios.
+</p>
+<p>
+    <strong>Map</strong>
+</p>
+<p>
+    Mapping based anonymisation can be used in scenarios, where a larger number of values must be compressed to a smaller set of values. A good example would
+    be the age of an employee. The exact age may be rounded to the next multiple of 10.
+</p>
+<p>
+    The home address of a customer may be mapped to a space of 5-10 hypothetical addresses.
+</p>
+<p>
+    While referential constraints can be maintained by this method, the existing unique constraints will nearly always be dropped.
+</p>
+<h2>
+    Architecture Picture
+</h2>
+<p>
+    <img src="images/AnonArchitecture21.png" />
+</p>
+<h2>
+    Configuring
+</h2>
+<p>
+    <strong>Creating a database configuration</strong>
+</p>
+<p>
+        The first step in creating an anonymisation configuration is defining the connection to the target database. The database type, the JDBC connection URL
+        and the user/password must be provided. Anonimecs will validate the connection, and let you define your target schema in this database.
+</p>
+<p>
+         The next step in the configuration workflow is connecting the database. After connecting the database, the metadata dictionaries will be loaded, and
+        the user is presented a Database Browser like view of the target schema. Selecting alternative schemas is also supported.
+</p>
+<p>
+        The user will also be presented a list of suspicions columns, where the name of the column and its data type suggest sensitive information.
+</p>
+<p>
+    The user will now select the tables that need to be anonymized on by one, and conclude the following steps.
+</p>
+<p>
+    <strong>Anonymisation method</strong>
+</p>
+<p>
+		After selecting the target column in the target table, the user will select an anonymisation type. Refer to        <em>Supported databases, methods and data types</em> chapter for details on supported methods. One of the key features of Anonimecs is to always
+        visualize your actions. When selecting the anonymisation method, the GUI will display sample 5 rows of the column values, in the original form, and
+        anonymized. This way the user will always have good understanding what to expect from this anonymisation.
+
+</p>
+<p>
+    Some anonymisations, like mapping require further fine tuning that is achieved in a popup window. 
+</p>
+<p>
+    <strong>Anonymized column and related tables</strong>
+</p>
+<p>
+        One of the main benefits of Anonimecs over the custom made SQLs is the support of database constraint. The database may constrain the values of the
+        target column in many ways, like referential integrity (incoming or outbound), primary key, unique, etc. Anonimecs has sophisticated metadata handling
+        to cater for these constraints. One example of this is the use of foreign keys as a mean to gather related tables into the same anonymisation method.
+        If the user selects columnA in tableA, that is referentially linked to columnB in tableB, then Anonimecs will automatically suggest including columnB
+        in the same anonymisation method as columnA.
+</p>
+<p>
+        This ensures, that referential integrity is maintained after the anonymisation run. Alternatively, the user may decide to exclude a referentially
+        linked table from the anonymisation method. In this case, Anonimecs will need to drop or deactivate the referential constraint during the anonymisation
+        run.
+</p>
+<h2>
+    Anonymisation run
+</h2>
+<p>
+    Once you have finished setting up your configuration, or when you want to check the validity of your anonymisation settings, you will need to run your
+    configuration. You will do this in the Run-&gt;Execute menu.
+</p>
+<p>
+    As described in detail in the previous chapter, in Anonimecs, the basic unit of execution is one anonymisation method comprising one or more anonymized
+    columns. In enterprise version you can selectively run these methods, by clicking on the run button of the method. The changes in the anonymisation process
+    are pushed to the execution GUI immediately, allowing for following the process of anonymisation without database browser tools.
+</p>
+<p>
+    The anonymisation SQL, generated by Anonimecs on the fly, is one of the main features of the application. Most of the anonymisation methods are based on
+    SQL functions and procedures, that are generated, pushed on to the target database, executed, and cleaned up. This approach allows for enhanced performance
+    optimization, such as usage of indices, temporary suspension of constraints, to yield a fast anonymisation run.
+</p>
+<p>
+    During the anonymisation run, Anonimecs will try to keep as many constraints as possible. The user may have however chosen to violate some referential or
+    unique constraints with the configuration. Such constraints will be suspended ( for example in Oracle) or removed (for example in Sybase), depending on the
+    vendor specific possibilities. See the next chapter on more details on constraint management.
+</p>
+<p>
+    Running all anonymisation or scheduling the anonymisation via the Scheduler will execute the whole batch of anonymisation methods defined in the connected
+    database configuration.
+</p>
+<p>
+    Each anonymisation run will leave a detailed audit trail as described in the Auditing section.
+</p>
+<h2>
+    Constraint Management
+</h2>
+<p>
+    Constraints are the essence of relational databases, and database developers go to great lengths to ensure the business data is constrained to the business
+    domain. The database vendors that are supported by Anonimecs will each implement the commonly used data constraints, while some vendors add vendor specific
+    constraints (MYSQL Enum, Oracle check constraint). Anonimecs supports the following list of constraints, which are currently supported by all vendors:
+</p>
+<ul>
+    <li>
+        Not Null Columns
+    </li>
+    <li>
+        Primary Keys (single and multi column)
+    </li>
+    <li>
+        Unique Constraints (single and multi column)
+    </li>
+</ul>
+<p>
+    · Incoming Foreign key constraints (single and multi column)
+</p>
+<p>
+    · Outgoing Foreign key constraints (single and multi column)
+</p>
+<p>
+    In addition to the above, Anonimecs supports cross schema constraints for Oracle and MySql databases.
+</p>
+<p>
+    Constraint parsing and management is present in various parts of the Anonimecs process. The Config GUI will show the constraints for the selected column,
+    aiding the configuration user to select the fitting anonymisation method. The Config GUI will also use the Foreign Key constraints to suggest binding
+    referenced tables into a common anonymisation method.
+</p>
+<p>
+    During the anonymisation run, the constraint manager will suspend the constraints of the table. This has a significant speed impact, as the database will
+    not need to validate the constraint for every changed row. In addition, some constraint may not be compatible with the targeted anonymisation. Such
+    constraints will not be recreated. An example is the the user_mail column, that has a unique constraint, and the anonymisation configuration requires
+    Destroy anonymisation no this column. The following table displays the column before and after the anonymisation.
+</p>
+<table class="table table-striped table-condensed">
+    <tbody>
+        <tr>
+            <td valign="top" width="319">
+                <p>
+                    <strong>user_mail before anonymisation</strong>
+                </p>
+            </td>
+            <td valign="top" width="319">
+                <p>
+                    <strong>user_mail after anonymisation</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="319">
+                <p>
+                    paul.osborne@company.com
+                </p>
+            </td>
+            <td valign="top" width="319">
+                <p>
+                    xxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="319">
+                <p>
+                    mark.comping@company.com
+                </p>
+            </td>
+            <td valign="top" width="319">
+                <p>
+                    xxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="319">
+                <p>
+                    Valid Unique constraint
+                </p>
+            </td>
+            <td valign="top" width="319">
+                <p>
+                    Suspended or dropped unique constraint
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2>
+    Scheduling – Enterprise Feature
+</h2>
+<p>
+    In Anonimecs, it is possible to run an anonymisation process in scheduled manner, without user interaction. The startServerRunner and the
+    startStandaloneRunner scripts are provided with the enterprise distribution, with bat/sh content to cater for Windows/Linux.
+</p>
+<p>
+    The startStandaloneRunner.sh will not require a running Anonimecs server, and is intended for small to medium enterprises, where a dedicated server running
+    the Anonimecs server may not be available.
+</p>
+<p>
+    Run example: startStandaloneRunner.sh <em>salesdatabase</em>
+</p>
+<p>
+    where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+</p>
+<p>
+    The startServerRunner.sh script will connect to the server via the RMI API (see API section), and run the anonymisation within the context of the server.
+    This is more feasible for large organization, with multiple database configurations.
+</p>
+<p>
+    Run example: startServerRunner.sh <em>salesdatabase</em>
+</p>
+<p>
+    where <em>salesdatabase</em> is the GUI name of the database configuration you intend to anonymize.
+</p>
+<p>
+    Enterprise tools for scheduling processes are well established by most of our client. We offer tested solutions to the most popular scheduling frameworks,
+    including Cron, Quartz, UC4.
+</p>
+<h2>
+    Multi user capabilities – Enterprise feature
+</h2>
+<p>
+    While the free version of Anonimecs does not support securing the tool itself, the enterprise version comes with an extensible login feature. Out of the
+    box, Anonimecs will install a default admin user admin/123456 that you can use for initial login to the GUI.
+</p>
+<p>
+    After the initial login, the admin should change the password of this admin user, and create other users representing the database configurators. Each
+    database connection (configuration) will than be assigned to the user who created it. Please note, that users can share database configurations. Refer to
+    the last chapter on how to achieve this.
+</p>
+<h2>
+    Auditing
+</h2>
+<p>
+    Logging and auditing is a common and proven concept of enterprise processes. It helps tracking the changes of your data, following the state of the process
+    and looking for errors if your process does not work as intended.
+</p>
+<p>
+    Anonimecs offers powerful auditing mechanisms that track the state of your databases, data, and their intended anonymity. Each execution of an
+    anonymisation method will leave a persistent trace of you action, be it a manual or scheduled execution. You can then review the data in the Run-&gt;Audit
+    Logs menu point.
+</p>
+<p>
+    Any execution trigger will create a line in the displayed table. Clicking on this line will reveal the details of this anonymisation execution, and will
+    help you to assess, where your process spent most of its time (database resources), and if it finished successfully. In case of data error, or other
+    malfunction of your configuration, you can trace here down to the columns that have succeeded in anonymisation, and the first column, where the execution
+    halted. Anonimecs will always halt the anonymisation process on the first error, as it is easier to fix this error and continue from this point, than deal
+    with multiple errors and partial failures.
+</p>
+<p>
+    Auditing also helps to estimate runtimes of your anonymisation. Previous runtimes will be consulted when a new run is started, so you will have a
+    relatively precise estimate of the expected runtimes.
+</p>
+<h2>
+    Backup – Enterprise Feature
+</h2>
+<p>
+    Sophisticated enterprises, with multiple databases, department and data streams require sophisticated anonymisation setups. These will span over several
+    database configurations, may be provisioned by different users, and require days or weeks of implementation and testing. The Backup functionality comes to
+    help here. It allows for regular dumps (backups) of the configuration data and retaining or moving this configuration.
+</p>
+<p>
+    You can think of this as a support for a change cycle in your anonymisation setup. Back up your current setup, as you are sure it works as intended. Make
+    your configuration changes, until you are satisfied with the new configuration. Should you get lost on the way, just roll back to your last best setup, and
+    start anew.
+</p>
+<p>
+    To create a backup of your current setup, navigate to the Admin-&gt;Backup menu. The displayed page will show you all the previous backups you or other
+    admins have created. Press the <strong>Backup the configuration now</strong> button to create a new backup. This will back up the complete state of you
+    Anonimecs, including anonymisation methods, users, audit trails.
+</p>
+<p>
+    You will not need to stop Anonimecs or the database server for this operation.
+</p>
+<p>
+    To roll back to a previous backup, go to the Admin-&gt;Backup menu, and follow the instructions in the bottom of the screen.
+</p>
+<h2>
+    JAVA API – Enterprise Feature
+</h2>
+<p>
+    The concepts of Anonimecs strongly discourages the one size fits all principle. We believe in scalable architecture, and offer solutions, that suit your
+    business case complexity. One of the ultimate features of Anonimecs is its Java API that allows interacting with your installation solely with machine to
+    machine manner.
+</p>
+<p>
+    The scheduling feature, described in the previous chapters makes itself use of this API. However, your scenarios are not limited to running an existing
+    anonymisation configuration. You can create and manage your database connections or anonymisation configuration, and run them all as a part of your
+    corporate application.
+</p>
+<p>
+    The Java API is centered on the anon-api.jar and an RMI interface to the Anonimecs Server Process. The following tutorial show you how to create a new
+    anonymisation configuration with the use of Maven, Spring, Java and the anon-api.jar. This tutorial assumes you are already familiar with these Maven and
+    Java.
+</p>
+<p>
+    1) Add maven dependency to the anon-api.jar available in your Anonimecs enterprise ZIP distribution.
+</p>
+<pre class="prettyprint ">
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.anon&lt;/groupId&gt;
+		&lt;artifactId&gt;anon-api&lt;/artifactId&gt;
+		&lt;version&gt;${project.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	
+</pre>
+
+<p>
+    This will transitively fetch all necessary spring dependencies.
+</p>
+<p>
+    2) Import the Spring RMI client configuration file spring-anon-rmi-client.xml your master spring config.
+</p>
+<pre class="prettyprint ">
+    &lt;import resource="classpath:spring-anon-rmi-client.xml"/&gt;
+</pre>
+    <br/>
+    This will load the RMI Stubs in the Spring container, and define the server lookup.
+
+<p>
+    3) Inject your API stubs in your client application.
+    <br/>
+    <br/>
+</p>
+<pre class="prettyprint ">
+    @Autowired DatabaseConfigService databaseConfigService;
+    @Autowired EditedTableService editedTableService;
+</pre>
+    <br/>
+<p>
+    4) Start the Anonimecs server, and run your client code.
+</p>
+
+<pre class="prettyprint ">
+	@Autowired	
+	DatabaseConfigService databaseConfigService;
+
+	@Autowired
+	EditedTableService editedTableService;
+	
+	public void createDatabaseConfigration() {
+		DatabaseConfig databaseConfig = createDatabaseConfigMySql();
+		databaseConfigService.addDatabaseConfig(databaseConfig);
+	}
+
+	public DatabaseConfig createDatabaseConfigMySql() {
+		DatabaseConfig config = new DatabaseConfig();
+		config.setUrl("localhost:3306");
+		config.setLogin("user");
+		config.setPassword("password");
+		config.setVendor(Database.MYSQL);
+		config.setVersion(null);
+		config.setGuiName("mysql-database");
+		return config;
+	}
+
+	public void addAnonymisationMethod(){
+		DatabaseTableInfo editedTable= new DatabaseTableInfo();
+		editedTable.setName("dept_manager");
+		editedTable.setSchema("employees");
+		DatabaseColumnInfo editedColumn = new DatabaseColumnInfo("to_date", 
+			"date", DatabaseSpecifics.MySqlSpecific);
+		editedTable.addColumn(editedColumn);
+
+		AnonymisedColumnInfo anonymizedColumn = new AnonymisedColumnInfo(editedColumn);
+		
+		AnonymisationMethod anonymisationMethod = new AnonymisationMethodDestoryMySql();
+		
+		
+		DatabaseConfig databaseConfig = databaseConfigService.loadConnectionConfig(“mysql-database”);
+		
+		anonServer.useDatabaseConfig(databaseConfig);
+		editedTableService.addAnonymisation(editedTable,
+		anonymizedColumn,Collections.EMPTY_LIST, anonymisationMethod);
+	}
+   
+</pre>
+    
+
+<p>
+    5) This is all. After this point, your new database configuration is available in the Anonimecs GUI for manual configuration. Obviously, you can also
+    configure the anonymisation over the API. For the full Java API documentation refer to the Javadoc of the anon-api.jar.
+</p>
+<strong>
+    <br clear="all"/>
+</strong>
+<h2>
+    Configuration Database Access and SQL Batch Config – Enterprise Feature
+</h2>
+<p>
+    Anonimecs stores its internal configurations in an SQL database that is also accessible via JDBC externally in the enterprise edition. You can use this
+    access to export or import configurations, audits, or other table data. Worth noting is, that any sensitive information, like user passwords or database
+    passwords are encrypted with the highest encryption in this database.
+</p>
+<p>
+    To access the config database use the following JDBC parameters in your database browser:
+</p>
+<p>
+    &lt;property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver" /&gt;
+    <br/>
+    &lt;property name="url" value="jdbc:derby://localhost:1527/anon" /&gt;
+</p>
+<p>
+    The Anonimecs configuration database tables are depicted in the below graphic. To configure the database with an SQL Batch, you will need to create the
+    content of the DATABASECONFIG, ANONIMISATIONMETHODDATA and ANONIMISATIONCOLUMNDATA tables.
+</p>
+<p>
+    <img src="images/DbModelAnon21.png" />
+</p>
+
+			
+		<!-- *********** PASTE HERE END -->
+
+		</div>
+		<!-- /.row -->
+
+		<div ng-include="'include_footer.html'"></div>
+
+	</div>
+	<!-- /.container -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Piwik -->
+	<script src="js/piwik.js"></script>
+	<noscript>
+		<p>
+			<img src="//stats.anonimecs.com/piwik.php?idsite=1" style="border: 0;" alt="" />
+		</p>
+	</noscript>
+	<!-- End Piwik Code -->
+
+	<script>
+	  !function ($) {
+	    $(function(){
+	      window.prettyPrint && prettyPrint()
+	    })
+	  }(window.jQuery)
+	</script>
+</body>
+
+</html>
