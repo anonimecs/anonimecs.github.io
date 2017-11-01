@@ -1,3 +1,3 @@
 # [Anonimecs Web]
-currenctly available at http://www.anonimecs.com
+currenctly available at https://anonimecs.github.io
 
